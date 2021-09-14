@@ -16,7 +16,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Event Information
+      - name: Show Event Information
         run: |
           echo "Event '${{ github.event.action }}' received from '${{ github.event.client_payload.repository }}'"
 
