@@ -16,12 +16,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Event Information
+      - name: Show Event Information
         run: |
-        echo "Event '${{ github.event.action }}' received from '${{ github.event.client_payload.repository }}'"
+          echo "Event '${{ github.event.action }}' received from '${{ github.event.client_payload.repository }}'"
 
       - name: Build Website
-        if github.event.action == 'build_website'
+          if github.event.action == 'build_website'
         run: |
           echo "Received repo update. Starting building website."
 
